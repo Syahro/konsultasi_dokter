@@ -9,6 +9,8 @@ Color blackTitleColor = Color(0XFF373246);
 Color greyColor = Color(0XFFB4B4B4);
 Color blueColor = Color(0XFF4B7BF9);
 Color blackChatColor = Color(0XFF182C4C);
+Color pinkColor = Color(0XFFFF8A8A);
+Color blueChatColor = Color(0XFFE3EBFF);
 
 TextStyle titleTextStyle = GoogleFonts.poppins(
   color: blackTitleColor,
