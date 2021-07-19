@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:konsultasi_dokter/pages/medicine_detail_page.dart';
 import 'package:konsultasi_dokter/theme.dart';
 import 'package:konsultasi_dokter/widget/floating_button.dart';
 
@@ -163,65 +164,73 @@ class ChatPage extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Container(
-                        margin: EdgeInsets.only(left: 42),
-                        height: 208,
-                        width: 187,
-                        decoration: BoxDecoration(
-                          color: whiteColor,
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(20),
-                            bottomLeft: Radius.circular(20),
-                            bottomRight: Radius.circular(20),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return MedicineDetailPage();
+                          }));
+                        },
+                        child: Container(
+                          margin: EdgeInsets.only(left: 42),
+                          height: 208,
+                          width: 187,
+                          decoration: BoxDecoration(
+                            color: whiteColor,
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20),
+                              bottomLeft: Radius.circular(20),
+                              bottomRight: Radius.circular(20),
+                            ),
                           ),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.all(5),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(20),
-                                ),
-                                child: Image.asset(
-                                  'assets/medicine.png',
-                                  width: 187,
-                                  height: 100,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.symmetric(
-                                horizontal: 15,
-                              ),
-                              child: Text(
-                                'I suggest you consume\nvitamin C',
-                                style: chatTextStyle,
-                              ),
-                            ),
-                            Container(
-                              width: 187,
-                              height: 38,
-                              decoration: BoxDecoration(
-                                color: blueColor,
-                                borderRadius: BorderRadius.vertical(
-                                  bottom: Radius.circular(20),
-                                ),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'View Product',
-                                  style: titleTextStyle.copyWith(
-                                    fontSize: 12,
-                                    color: whiteColor,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.all(5),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.only(
+                                    topRight: Radius.circular(20),
+                                  ),
+                                  child: Image.asset(
+                                    'assets/medicine.png',
+                                    width: 187,
+                                    height: 100,
+                                    fit: BoxFit.cover,
                                   ),
                                 ),
                               ),
-                            )
-                          ],
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 15,
+                                ),
+                                child: Text(
+                                  'I suggest you consume\nvitamin C',
+                                  style: chatTextStyle,
+                                ),
+                              ),
+                              Container(
+                                width: 187,
+                                height: 38,
+                                decoration: BoxDecoration(
+                                  color: blueColor,
+                                  borderRadius: BorderRadius.vertical(
+                                    bottom: Radius.circular(20),
+                                  ),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    'View Product',
+                                    style: titleTextStyle.copyWith(
+                                      fontSize: 12,
+                                      color: whiteColor,
+                                    ),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ],
